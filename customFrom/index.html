@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义表单</title>
+    <style>
+        .bg {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width:164px;
+            height: 151px;
+            box-shadow: #ccc 0 1px 16px;
+        }
+        .item {
+            float: left;
+            padding: 5px;
+            border-radius: 3px;
+            margin: 5px;
+            background-color: #cccccc;
+            cursor: default;
+            width: 60px;
+            text-align: center;
+        }
+        .item:hover{
+            background-color: #9bcccb;
+        }
+        .on {
+            background-color: #4da6cc;
+        }
+        .on:hover{
+            background-color: #2188cc;
+        }
+    </style>
+</head>
+<body style="margin: 20px 200px">
+        <div class="bg">
+            <div class="item">原地址</div>
+            <div class="item">原地址</div>
+            <div class="item">原地址</div>
+            <div class="item">原地址</div>
+            <div class="item">原地址</div>
+            <div class="item">原地址</div>
+            <div class="item">原地址</div>
+        </div>
+</body>
+    <script>
+        var parentEle = document.querySelector('.bg');
+        parentEle.onclick = function(e){
+            var target = e.target;
+            if(target.innerHTML == '原地址'){
+                if(target.classList.contains('on')){
+                    target.classList.remove('on');
+                } else {
+                    target.classList.add('on');
+                }
+            }
+        }
+    </script>
+</html>
